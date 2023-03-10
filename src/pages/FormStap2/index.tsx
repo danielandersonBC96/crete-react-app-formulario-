@@ -1,8 +1,9 @@
 import * as Components from './styled'
-import {  useNavigate} from 'react-router-dom';
+import { useNavigate} from 'react-router-dom';
 import { useForm, FormActions } from '../../contexts/FormContext';
 import { ChangeEvent,useEffect } from 'react';
 import { Theme } from '../../Components/Theme';
+import { SelectOption } from '../../Components/SelectOption';
 
 export const FormStap2 = () => {
 
@@ -45,6 +46,21 @@ export const FormStap2 = () => {
                <h1> Seu nome completo </h1>
                <hr/>
              </Components.Container>
+            <SelectOption
+            title='Jinior '
+            description='progamo a 1 ano ou mais '
+            icon=' '
+            />
+            <SelectOption
+            title='pleno'
+            description='progamo a 2 anos ou mais '
+            icon=' '
+            />
+            <button
+            onClick={handleNextStep}
+            >
+             proximo 
+            </button>
           </Theme>
         </div>
     )

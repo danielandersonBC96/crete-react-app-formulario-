@@ -35,15 +35,11 @@ export const FormStep1 = ( ) => {
       type: FormActions.setName,
       playload:e.target.value
 
-    })
-
-    
+    }) 
   }
-
     return (
       <Theme>
         <Components.Container>
-
               <p>Passo 1 {state.currentStep}</p> 
               <h1> Seu nome completo </h1>
                <hr/>
@@ -56,13 +52,13 @@ export const FormStep1 = ( ) => {
                 onChange={handleNameChange}
                 />
               </label>
-              <button onClick={ handleNextStep}>
+              <button 
+              onClick={ handleNextStep}
+              >
                 Proximo 
               </button>
 
          </Components.Container>
-      </Theme>
-         
+      </Theme>        
     )
-
 }
