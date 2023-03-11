@@ -4,6 +4,7 @@ import { SidebarItem } from "../SideBar";
 import * as Components from "./styled"
 import { useForm } from '../../contexts/FormContext';
 
+
 type Props = {
 
     children: ReactNode;
@@ -20,26 +21,26 @@ export const Theme = ( {children}:Props ) => {
                        <SidebarItem
                        title="Pessoal"
                        description=" Se identifique "
-                       icon="profile"
-                       path="/"
+                       icon="profile "
+                      path='/'
                        active={state.currentStep === 1}
                        />
                        <SidebarItem
                          title="Peofisional"
                          description=" Seu  Nivel"
-                         icon="book"
+                         icon="book "
                          path="/step2"
                          active={state.currentStep === 2}
                        />
                        <SidebarItem
                        title="Contatos"
                        description='Seus Dados'
-                       icon="email"
-                       path="step3"
-                       active={state.currentStep === 2} 
+                       icon=" mail"
+                       path="/step3"
+                       active={state.currentStep === 3} 
                        />
                     </Components.Sidebar>
-                    <Components.Page>
+                    <Components.Page>'
                         
                    
                     {children}
