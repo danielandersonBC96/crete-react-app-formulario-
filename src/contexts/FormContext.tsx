@@ -11,7 +11,7 @@ const FormContext = createContext <ContextType | undefined >( undefined);
 type State = {
     currentStep: number;
     name:string ;
-    level: 0 | 1 ;
+    level: 0 | 1 | 2 ;
     email:string;
     github:string;
 
@@ -64,7 +64,7 @@ const FormReduce = ( state:State,action:Action ) => {
             case FormActions.setLevel:
             return{...state, level:action.playload} 
             case FormActions.setEmail:
-            return{ ... state,email:action.playload}  
+            return{ ...state,email:action.playload}  
             case FormActions.setGitHub:
             return{...state, gitHub:action.playload}
             

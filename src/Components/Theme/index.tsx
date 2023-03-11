@@ -1,6 +1,8 @@
 import { ReactNode } from "react";
 import { Header} from "../Header";
+import { SidebarItem } from "../SideBar";
 import * as Components from "./styled"
+import { useForm } from '../../contexts/FormContext';
 
 type Props = {
 
@@ -8,14 +10,34 @@ type Props = {
 }
 
 export const Theme = ( {children}:Props ) => {
-
+    const { state } = useForm();
     return(
         <Components.Container>
             <Components.Area>
                 <Header/>
                 <Components.Steps>
                     <Components.Sidebar>
-
+                       <SidebarItem
+                       title="Pessoal"
+                       description=" Se identifique "
+                       icon="profile"
+                       path="/"
+                       active={state.currentStep === 1}
+                       />
+                       <SidebarItem
+                         title="Peofisional"
+                         description=" Seu  Nivel"
+                         icon="book"
+                         path="/step2"
+                         active={state.currentStep === 2}
+                       />
+                       <SidebarItem
+                       title="Contatos"
+                       description='Seus Dados'
+                       icon="email"
+                       path="step3"
+                       active={state.currentStep === 2} 
+                       />
                     </Components.Sidebar>
                     <Components.Page>
                         
@@ -28,4 +50,4 @@ export const Theme = ( {children}:Props ) => {
 
 
     )
-}
+    }
